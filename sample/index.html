@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.item {
+  width: 50px;
+}
+</style>
+<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="../jquery.scroll-reason.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+$(document).on('scroll', function(event) {
+  console.log(event.scrollType);
+});
+
+
+
+$(document).on('click', function() {
+  var $elm = $('body');
+  $elm.animate({
+    scrollTop: 0
+  }, 10000);
+  //$elm.css({scrollTop:0});
+  //$elm.scrollTop(0);
+})
+</script>
+</head>
+<body>
+  <div class="item">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+  <div class="item">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+</body>
+</html>
