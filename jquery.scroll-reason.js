@@ -24,8 +24,12 @@
         info = getScrollInfo($elm),
         scrollTop = $elm.scrollTop(),
         diff = Math.floor(info.expectedScrollPos - scrollTop);
-
-    if (info.scrollSet && diff === 0) {
+    
+    /*
+      diff with expectedScrollPos seems to fail in Safari and FF
+      diff was used to be able to interrupt a scroll animation by user interaction
+    */
+    if (info.scrollSet /*&& diff === 0*/) {
       event.scrollType = 'programm';
     } else {
       event.scrollType = 'user';
